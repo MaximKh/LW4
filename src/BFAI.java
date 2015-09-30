@@ -1,6 +1,7 @@
 
 public class BFAI extends Battlefield {
     public BFAI() {
+        super();
         this.ship[0] = new Ship(4, N);
         this.mark(this.ship[0]);
     }

@@ -27,7 +27,7 @@ public class Battlefield {
         for(int i = 0; i < N; i++){
             System.out.print(i + 1 + "|");
             for(int j = 0; j < N; j++){
-                System.out.print(cell[i][j] + " ");
+                System.out.print(cell[j][i] + " ");
             }
             System.out.println();
         }
