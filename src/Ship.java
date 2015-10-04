@@ -3,19 +3,15 @@ public class Ship {
     int x;
     int y;
     int length;
-    boolean rotation;
+    boolean rotation; //True- горизнтально, False- вертикально
 
-    public Ship(int length, int size) {
+    public Ship(int x, int y, int length, boolean rotation) {
+        this.x = x;
+        this.y = y;
         this.length = length;
-        this.rotation = Math.random() < 0.5;
-        do {
-            this.x = (int) (Math.random() * size);
-        } while (this.rotation ^ this.x + this.length < size);
-        do {
-            this.y = (int) (Math.random() * size);
-        } while (!this.rotation ^ this.y + this.length < size);
-
-//        System.out.println("X-" + this.x + " Y-" + this.y + " Rotation-");
+        this.rotation = rotation;
+//        System.out.println("X-" + this.x + " Y-" + this.y + " Length-" + length + " Rotation-" + this.rotation);
 
     }
+
 }

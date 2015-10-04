@@ -1,10 +1,10 @@
 
 public class Battlefield {
     final int N = 8; // Размер поля
-    int ship4 = 2;
-    int ship3 = 3;
-    int ship2 = 4;
-    int ship1 = 5;
+    int ship4 = 1;
+    int ship3 = 2;
+    int ship2 = 3;
+    int ship1 = 4;
     Ship[] ship;
     char[][] cell;
 
@@ -25,6 +25,7 @@ public class Battlefield {
         System.out.println();
         //Печать поля
         for(int i = 0; i < N; i++){
+            if(i < 9) System.out.print("0");
             System.out.print(i + 1 + "|");
             for(int j = 0; j < N; j++){
                 System.out.print(cell[j][i] + " ");
